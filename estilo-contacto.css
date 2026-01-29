@@ -1,0 +1,81 @@
+#contacto {
+  padding: 80px 20px;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+.titulo-contacto {
+  font-size: 50px; /* Tamaño fijo en píxeles */
+  margin-bottom: 20px;
+  font-family: "Press Start 2P", cursive;
+}
+.subtitulo-contacto {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.contenedor-perfiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tarjeta-github {
+  flex: 0 1 280px; /* Tamaño fijo de 280px */
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: 0.3s;
+}
+.cargo {
+  font-size: 14px;
+  color: #ccc;
+  margin: 10px 0px 20px 0px;
+}
+
+#eileen-tarjeta:hover {
+  box-shadow: 0px 0px 25px 5px #a855f7;
+  transform: translateY(-10px);
+}
+#eileen-tarjeta .btn-github {
+  background-color: #a855f7;
+  color: white;
+  border: none;
+}
+
+#oscar-tarjeta:hover {
+  box-shadow: 0px 0px 25px 5px #ef4444;
+  transform: translateY(-10px);
+}
+#oscar-tarjeta .btn-github {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+}
+
+#sebastian-tarjeta:hover {
+  box-shadow: 0px 0px 25px 5px #22c55e;
+  transform: translateY(-10px);
+}
+#sebastian-tarjeta .btn-github {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+}
+
+/* Estilo base del botón */
+.btn-github {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 12px;
+}
