@@ -1,38 +1,32 @@
 #seccion-gameplay {
-  background-color: #000;
+  background: radial-gradient(circle at center, #0a0a2a 0%, #000 100%);
+  /* background-image: url('...'); Si hubiera imagen */
   background-size: cover;
   background-position: center;
   padding: 80px 10%;
   color: white;
 }
 
-.subtitulo-seccion {
-  margin-bottom: 30px;
-  font-size: 20px;
-  display: flex;
-  flex-direction: row; /* Fuerza a que las letras de colores estén una al lado de otra */
-  gap: 10px;
-  justify-content: center;
-}
 .subtitulo-consolas {
   margin-bottom: 30px;
   font-size: 45px;
   display: flex;
-  flex-direction: row; /* Fuerza a que las letras de colores estén una al lado de otra */
+  flex-direction: row;
   gap: 15px;
   justify-content: center;
 }
-.contenedor-video {
-  margin: 40px 0;
-}
+
+/* Reutilizando estilos base pero manteniendo la clase específica por si acaso */
 .titulo-gameplay {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  flex-direction: row; /* Fuerza a que las letras de colores estén una al lado de otra */
+  flex-direction: row;
   gap: 15px;
   font-size: 60px;
+  flex-wrap: wrap;
 }
+
 .contenedor-consolas {
   display: flex;
   flex-direction: row;
@@ -42,12 +36,14 @@
   margin-top: 30px;
   flex-wrap: wrap;
 }
+
 .contenedor-consolas img {
   width: 300px;
   height: auto;
   margin: 0 auto;
   display: block;
 }
+
 .tarjeta-consola {
   background-color: #2d2d2e;
   border: 2px solid #a855f7;
@@ -55,15 +51,16 @@
   padding: 20px;
   max-width: auto;
   text-align: center;
-  transition: all 0.3s ease; /* transición suave para el efecto hover */
+  transition: all 0.3s ease;
   cursor: pointer;
 }
+
 .tarjeta-consola:hover {
-  transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
-  box-shadow: 0 4px 8px #a855f7; /* Añade una sombra */
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px #a855f7;
 }
+
 /* TIPS PARA JUGAR COMO PRO */
-/* Contenedor general de la parte de tips */
 .contenedor-maestria {
   margin-top: 70px;
   padding: 30px;
@@ -76,14 +73,14 @@
   letter-spacing: 4px;
   text-shadow: 2px 2px #000;
 }
-/* panel tips */
+
 .panel-tactico {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
-/* Estilo de los tips */
+
 .tarjeta-fina {
   background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
   border-top: 4px solid #fff;
@@ -115,7 +112,7 @@
   color: #b3b3b3;
 }
 
-/* colores tarjeta */
+/* Colores tarjeta */
 .tarjeta-fina.cian {
   border-color: #00f3ff;
 }
@@ -132,25 +129,15 @@
   border-color: #ef4444;
 }
 
-/* media queries responsive*/
+/* Media Queries Específicos de Gameplay */
 @media (max-width: 480px) {
   .titulo-gameplay {
-    display: flex !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 4px !important;
     font-size: 22px !important;
     width: 100% !important;
     margin: 20px 0 !important;
   }
 
-  .contenedor-video {
-    width: 100% !important;
-    padding: 0 10px !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
+  /* .contenedor-video ya está manejado en principal */
 
   .contenedor-video iframe {
     width: 100% !important;
@@ -160,22 +147,16 @@
   }
 
   .subtitulo-consolas {
-    display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: center !important;
     gap: 3px !important;
     font-size: 18px !important;
-    width: 100% !important;
     padding: 0 5px !important;
-    text-align: center !important;
   }
 
   .contenedor-consolas {
-    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     gap: 30px !important;
-    width: 100% !important;
     padding: 0 !important;
   }
 
@@ -187,15 +168,11 @@
 
   #seccion-gameplay {
     overflow-x: hidden !important;
-    width: 100% !important;
     padding: 20px 0 !important;
   }
+
   .contenedor-maestria h2 {
     font-size: 20px !important;
-    line-height: 1.4 !important;
-    text-align: center !important;
-    width: 100% !important;
-    padding: 0 10px !important;
     margin-bottom: 20px !important;
   }
 }

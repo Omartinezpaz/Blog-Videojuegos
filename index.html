@@ -1,22 +1,24 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TETRIS</title>
+    <link rel="preload" as="image" href="/multimedia/tetris-official-logo.png" fetchpriority="high">
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="estilo-principal.css" />
-    <link rel="stylesheet" href="estilo-gameplay.css" />
-    <link rel="stylesheet" href="estilo-tienda.css" />
-    <link rel="stylesheet" href="estilo-contacto.css" />
+    >
+    <link rel="stylesheet" href="estilo-historia.css">
+    <link rel="stylesheet" href="estilo-principal.css">
+    <link rel="stylesheet" href="estilo-gameplay.css">
+    <link rel="stylesheet" href="estilo-tienda.css">
+    <link rel="stylesheet" href="estilo-contacto.css">
   <link rel="icon" href="multimedia/Tetris_logo.png" type="image/png">
   </head>
   <body>
     <header class="encabezado">
-      <img src="multimedia/Tetris_logo.png" alt="Logo" class="logo" />
+      <img src="/multimedia/Tetris_logo.png" alt="Logo" class="logo">
       <nav>
         <ul class="botones-navegacion">
           <li><a href="#seccion-historia">HISTORIA</a></li>
@@ -28,20 +30,122 @@
       </nav>
     </header>
 
-    <main class="contenedor-principal">
-      <section id="inicio" class="portada">
-        <h1 class="titulo-tetris">
-          <span class="rojo">T</span><span class="naranja">E</span
-          ><span class="amarillo">T</span><span class="verde">R</span
-          ><span class="cian">I</span><span class="azul">S</span>
-        </h1>
-        <p>El videojuego que conquistó el mundo.</p>
-      </section>
+     <main class="contenedor-principal">
+      <section id="inicio" class="portada"> <!-- empieza section  -->
+          <div class="box">
+            <img
+              src="/multimedia/tetris-official-logo.png" 
+              alt="tetris official logo"
+              fetchpriority="high"
+              decoding="async">
+          </div>
+    <p>El videojuego que conquistó el mundo.</p>
+    <!-- Cambio hoy: se cerró la sección #inicio para evitar anidación con 'Historia' -->
+    </section>
+<!-- ===============================     FIN   ================================   -->
+ <section id="seccion-historia" class="espacio-trabajo-hist">
+      <h2 class="titulo-tetris">
+  <span class="rojo">H</span
+  ><span class="naranja">I</span
+  ><span class="amarillo">S</span
+  ><span class="verde">T</span
+  ><span class="cian">O</span
+  ><span class="azul">R</span
+  ><span class="purpura">I</span
+  ><span class="rojo">A</span>
+</h2>
 
-      <section id="seccion-historia" class="espacio-trabajo"></section>
+  <h2 class="titulo-tetris">
+  <span class="rojo">T</span
+  ><span class="naranja">E</span
+  ><span class="amarillo">T</span
+  ><span class="verde">R</span
+  ><span class="cian">I</span
+  ><span class="azul">S</span>
+</h2>
 
-      <section id="seccion-autor" class="espacio-trabajo"></section>
+<!-- ===============================     FIN   ================================   -->
 
+        <h2 class="subtitulo-pricipal">
+          "Desde 1984 hasta hoy, <br>El rompecabezas que conquistó el mundo." </h2>
+          <hr class="separador">
+          <p class="espacio-trabajo-hist">
+            Tetris nació en la Unión Soviética en 1984, creado por el ingeniero informático <strong>Alekséi Leonídovich Pázhitnov</strong>  
+            mientras trabajaba en <strong>el Centro de Computación de la Academia de Ciencias soviética</strong>, en pleno 
+            contexto de Guerra Fría. Inspirado en el juego de mesa Pentominós, decidió simplificar las piezas a tetrominós 
+            formados por cuatro cuadrados, de donde surge el nombre “Tetris”, combinación de “tetra-” y “tenis”, su deporte 
+            favorito.
+
+            El primer prototipo se programó en una computadora <strong> Electronika 60</strong>, con gráficos muy simples, pero una 
+            jugabilidad tan adictiva que se extendió rápidamente entre colegas y usuarios de PC en la URSS y Europa del Este.
+            Debido a la <strong>legislación soviética</strong>, los derechos del juego quedaron en manos del Estado a través de ELORG, 
+            por lo que Pázhitnov no recibió beneficios hasta emigrar a Estados Unidos y <strong> fundar The Tetris Company </strong>
+            en 1996 junto con Henk Rogers, recuperando finalmente el control de su creación.
+          </p>
+
+<!-- ===============================     FIN   ================================   -->
+
+  <div class ="contenedor-video">
+        <hr class="separador">
+ 
+        <h3 class="subtitulo-pricipal">"La historia de Tetris <br>Bully Magnets - Historia Documental."</h3>
+        <iframe width="660" height="415" src="https://www.youtube.com/embed/oyAh5vnjNww?si=u9PE6KUKOBrOV1xP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <hr class="separador">
+<div>
+<h2 class="subtitulo-pricipal">Evolución Histórica y Primeras Versiones (1984–1989)</h2>
+<h3 class="subtitulo-seccion">Los Primeros Pasos: De Moscú al Mundo</h3>
+
+<p class="parrafo-portada">Tras su creación en 1984, Tetris se difundió rápidamente entre los programadores y científicos de Moscú. La versión original para Electronika 60 carecía de gráficos avanzados, pero su jugabilidad adictiva propició que Vadim Gerasimov portara el juego a IBM PC en 1985, lo que facilitó su expansión a través de disquetes en Europa del Este.</p>
+
+<p class="parrafo-portada">En 1986, programadores húngaros adaptaron Tetris para Apple II y Commodore 64, lo que atrajo la atención de Robert Stein, empresario británico de Andromeda Software, quien vio el potencial comercial del juego en Occidente. Stein inició negociaciones con la Academia de Ciencias de Moscú y, aunque inicialmente no obtuvo un contrato formal, vendió los derechos a la empresa británica Mirrorsoft y a su filial estadounidense Spectrum Holobyte, lo que generó una compleja red de licencias y disputas legales.</p>
+</div>
+
+<hr class="separador">  
+
+<!-- ===============================     FIN   ================================   -->
+
+     <div><h3 class="subtitulo-pricipal">Galería Histórica</h3></div>
+
+  <!-- Cambio hoy: atributos width/height corregidos a enteros válidos -->
+  <div class="carousel-container">
+    <div class="carousel-slide"><img id="img-1" width="258" height="258" src="/multimedia/img-historia/500_333.jpeg" alt="Tetris Hero"></div>
+    <div class="carousel-slide"><img id="img-2" width="258" height="258" src="/multimedia/img-historia/fdsdr.webp" alt="Tetris Hero"></div>
+    <div class="carousel-slide"><img id="img-3" width="258" height="258" src="/multimedia/img-historia/alexey-pajitnov-inventor-tetris-juego.jpg" alt="Tetris Hero"></div>
+    <div class="carousel-slide"><img id="img-4" width="258" height="258" src="/multimedia/img-historia/image.webp" alt="Tetris Hero"></div>
+    <div class="carousel-slide"><img id="img-5" width="258" height="258" src="/multimedia/img-historia/images (1).jpg" alt="Tetris Hero"></div>
+    <div class="carousel-slide"><img id="img-6" width="258" height="258" src="/multimedia/img-historia/images.jpg" alt="Tetris Hero"></div>
+    <div class="carousel-slide"><img id="img-7" width="258" height="258" src="/multimedia/img-historia/JUHUIC4YHRHCPHJ2RVOLC67UMU.avif" alt="Tetris Hero"></div>
+    <div class="carousel-slide"><img id="img-8" width="258" height="258" src="/multimedia/img-historia/Tetris-hist-15.webp" alt="Tetris Hero"></div>
+  </div>
+
+<br><br>
+
+<!-- ===============================     FIN   ================================   -->
+ 
+<div class="banner-arcade">
+  <div class="banner-fondo">
+    <img src="/multimedia/img-historia/img-tetris_5.jpg" alt="Tetris Arcade">
+  </div>
+  
+  <div class="banner-contenido-arcade">
+    <div class="titulo-arcade">
+ 
+      <span class="pixel-text">JUEGA ONLINE</span>
+    </div>
+    
+    <a href="https://play.tetris.com/" 
+       target="_blank" 
+       class="btn-arcade pixel-border">
+      <span class="btn-glow">▶ PLAY NOW</span>
+    </a>
+  </div>
+</div>
+</section>
+<!-- ===============================     FIN   ================================   -->
+<!-- ===============================-->
+<!-- Cambio hoy: se eliminó la sección vacía #seccion-autor -->
+ <!-- ===============================-->
       <section id="seccion-gameplay" class="espacio-trabajo">
         <h2 class="titulo-gameplay">
           <span class="rojo">G</span><span class="naranja">A</span
@@ -106,7 +210,7 @@
         </div>
         <br /><br />
         <div class="contenedor-maestria">
-          <h3 class="amarillo">🏆 EL ARTE DEL DOMINIO <br> ¡JUEGA COMO UN PROFESIONAL! </br></h3>
+          <h3 class="amarillo">🏆 EL ARTE DEL DOMINIO <br> ¡JUEGA COMO UN PROFESIONAL! <br></h3>
 
           <div class="panel-tactico">
             <div class="tarjeta-fina cian">

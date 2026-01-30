@@ -1,136 +1,177 @@
-#contacto {
-  padding: 80px 20px;
-  background-color: #121212;
+#seccion-contacto {
+  background: radial-gradient(circle at center, #0a0a2a 0%, #000 100%);
+  padding: 80px 10%;
   color: white;
   text-align: center;
 }
-.titulo-contacto {
-  font-size: 50px; /* Tamaño fijo en píxeles */
-  margin-bottom: 20px;
-  font-family: "Press Start 2P", cursive;
-}
+
 .subtitulo-contacto {
-  font-size: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
 }
 
+/* Reutilizando estilos base pero manteniendo la clase específica */
+.titulo-contacto {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-direction: row;
+  gap: 15px;
+  font-size: 60px;
+  flex-wrap: wrap;
+}
+
+.formulario-contacto {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: #252525;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+  font-family: "Press Start 2P", cursive; /* Mantiene fuente retro */
+  font-size: 12px;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: #a855f7;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.boton-enviar {
+  padding: 15px;
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: "Press Start 2P", cursive;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.boton-enviar:hover {
+  background-color: #9333ea;
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+.info-extra {
+  margin-top: 40px;
+  color: #888;
+  font-size: 12px;
+  line-height: 1.6;
+}
+/* Cambio hoy: estilos completos para tarjetas de perfiles GitHub */
+/* PERFILES GITHUB */
 .contenedor-perfiles {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
   margin-top: 40px;
 }
 
 .tarjeta-github {
-  flex: 0 1 280px; /* Tamaño fijo de 280px */
-  background: #1a1a1a;
+  background-color: #222;
   border: 2px solid #333;
-  border-radius: 15px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  border-radius: 12px;
+  padding: 25px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tarjeta-github:hover {
+  transform: translateY(-5px);
+  border-color: #a855f7;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.tarjeta-github h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.tarjeta-github p {
+  color: #888;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-github {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 10px;
   transition: 0.3s;
 }
-.cargo {
-  font-size: 14px;
-  color: #ccc;
-  margin: 10px 0px 20px 0px;
+
+.btn-github:hover {
+  background-color: #fff;
+  color: #000;
 }
 
-#eileen-tarjeta:hover {
-  box-shadow: 0px 0px 25px 5px #a855f7;
-  transform: translateY(-10px);
-}
-#eileen-tarjeta .btn-github {
-  background-color: #a855f7;
-  color: white;
-  border: none;
-}
+/* Colores específicos por perfil */
+#eileen-tarjeta {
+  border-bottom: 4px solid #ef4444;
+} /* Rojo */
+#oscar-tarjeta {
+  border-bottom: 4px solid #22c55e;
+} /* Verde */
+#sebastian-tarjeta {
+  border-bottom: 4px solid #3b82f6;
+} /* Azul */
 
-#oscar-tarjeta:hover {
-  box-shadow: 0px 0px 25px 5px #ef4444;
-  transform: translateY(-10px);
-}
-#oscar-tarjeta .btn-github {
-  background-color: #ef4444;
-  color: white;
-  border: none;
-}
-
-#sebastian-tarjeta:hover {
-  box-shadow: 0px 0px 25px 5px #22c55e;
-  transform: translateY(-10px);
-}
-#sebastian-tarjeta .btn-github {
-  background-color: #22c55e;
-  color: white;
-  border: none;
-}
-
-/* Estilo base del botón */
-.btn-github {
-  padding: 12px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  display: inline-block;
-  font-size: 12px;
-}
-/*media queries responsive */
-
+/* Media Queries Específicos de Contacto */
 @media (max-width: 480px) {
   .titulo-contacto {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    font-size: 22px !important;
-    width: 100% !important;
+    font-size: 24px !important;
+    gap: 5px !important;
     margin-bottom: 30px !important;
   }
 
-  #seccion-contacto {
-    width: 100% !important;
-    padding: 20px 10px !important;
-    overflow-x: hidden !important;
+  .subtitulo-contacto {
+    flex-wrap: wrap !important;
+    font-size: 16px !important;
+    gap: 5px !important;
   }
 
-  .contenedor-github {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 20px !important;
+  .formulario-contacto {
+    padding: 20px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
   }
 
-  .tarjeta-github {
-    width: 80% !important;
-    max-width: 260px !important;
-    padding: 15px !important;
-    height: auto !important;
-  }
-
-  .tarjeta-github img {
-    width: 60px !important;
-    height: 60px !important;
-    margin-bottom: 10px !important;
-  }
-
-  .tarjeta-github h3 {
-    font-size: 14px !important;
-    margin: 10px 0 !important;
-  }
-
-  .tarjeta-github p {
-    font-size: 11px !important;
-    margin-bottom: 15px !important;
-  }
-
-  .tarjeta-github a {
+  .formulario-contacto input,
+  .formulario-contacto textarea {
     font-size: 10px !important;
-    padding: 8px 12px !important;
-    width: auto !important;
+    padding: 12px !important;
   }
 }

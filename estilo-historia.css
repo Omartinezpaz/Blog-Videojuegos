@@ -1,0 +1,272 @@
+/* (8) SEPARADORES Y TÍTULOS ESPECÍFICOS DE HISTORIA */
+.separador {
+  color: #e82c077d;
+  height: 4px;
+  box-shadow: 0 0 20px rgba(232, 44, 7, 0.7); /* Sombra neón */
+  background: linear-gradient(90deg, transparent, #e82c07), transparent;
+  animation: brilloFooter 4s infinite;
+  margin: 5% auto;
+  border-radius: 2px;
+}
+
+.subtitulo-pricipal {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.538);
+  background: rgba(0, 0, 0, 0.132);
+  margin: 5% auto;
+  line-height: 2;
+}
+
+/* (9) SECCIONES GENERALES DE HISTORIA */
+.espacio-trabajo-hist {
+  padding: 60px 10%;
+  text-align: center;
+  background: radial-gradient(circle at center, #0a0a2a 0%, #000 100%);
+}
+
+.espacio-trabajo-hist p {
+  font-family: "Geo", sans-serif;
+  font-size: 28px;
+  color: #010f01;
+  background: rgba(0, 0, 0, 0.121);
+  position: relative;
+  z-index: 1;
+  padding: 15px 25px;
+  text-align: justify;
+  letter-spacing: 2px;
+  color: #ddd; /* Cambio hoy: legibilidad mejorada en fondo oscuro */
+}
+
+/* ESTILOS ESPECÍFICOS DE PORTADA (que complementan a principal) */
+.portada {
+  background-image: linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+  position: relative;
+}
+
+.portada::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.box {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  background: radial-gradient(circle at center, #0a0a2a 0%, #000 100%);
+}
+
+.box img {
+  filter: drop-shadow(0 0 15px #00ff00);
+  animation: flotar 3s ease-in-out infinite;
+  width: clamp(240px, 30vw, 520px);
+  height: auto;
+}
+
+.portada p {
+  font-family: "Geo", sans-serif;
+  font-size: 30px;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  position: relative;
+  z-index: 1;
+  padding: 15px 25px;
+  background: rgba(0, 0, 0, 0.121);
+  text-align: justify;
+  letter-spacing: 2px;
+}
+
+/* EFECTO DE LINEA EN BOTONES NAVEGACION (Específico de historia si se quiere mantener) */
+.botones-navegacion a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 10%;
+  width: 0;
+  height: 2px;
+  background: #00ff00;
+  transition: width 0.3s ease;
+}
+
+.botones-navegacion a:hover::after {
+  width: 80%;
+}
+
+/* ANIMACIONES */
+@keyframes separador {
+  0%,
+  100% {
+    background: linear-gradient(90deg, transparent, #00ff00, transparent);
+  }
+  50% {
+    background: linear-gradient(90deg, transparent, #00ff41, transparent);
+  }
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes brilloFooter {
+  0%,
+  100% {
+    box-shadow:
+      0 0 15px rgba(232, 44, 7, 0.5),
+      0 0 30px rgba(232, 44, 7, 0.3);
+    background: linear-gradient(90deg, transparent, #e82c07, transparent);
+  }
+  50% {
+    box-shadow:
+      0 0 25px rgba(232, 44, 7, 0.8),
+      0 0 40px rgba(232, 44, 7, 0.5);
+    background: linear-gradient(90deg, transparent, #ff3300, transparent);
+  }
+}
+
+/* CARRUSEL (Cambio hoy: sin alterar el <main> global) */
+
+.carousel-container {
+  width: 100%;
+  padding-block: 10px 10px;
+  margin: 10px 0px;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.538);
+  overflow-x: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+  border-radius: 12px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 14px;
+  width: calc(100% - 48px);
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: rgba(207, 10, 10, 0.7);
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, transparent, #00ff00, transparent);
+}
+
+.carousel-slide {
+  flex: 0 0 calc(33.333% - 6px);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, transparent, #507c5080, transparent);
+  scroll-snap-align: center;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  border: 2px solid #00ff00;
+  transition: transform 0.3s ease;
+  min-width: 200px; /* Seguridad */
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .carousel-slide {
+    flex: 0 0 calc(33.333% - 6px);
+  }
+}
+
+/* BANNER ARCADE */
+.banner-arcade {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border: 4px solid #f1f4f1;
+  background: radial-gradient(circle at center, #0a0a2a 0%, #000 100%);
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.538);
+  margin-top: 40px; /* Espacio superior para separarlo */
+  width: 100%; /* Asegurar ancho */
+  max-width: 100%; /* Evitar desborde */
+  box-sizing: border-box; /* Incluir borde en el ancho */
+}
+
+.banner-fondo {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.banner-contenido-arcade {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+}
+
+.pixel-text {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #00ff00,
+    0 0 20px #00ff00;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.btn-arcade {
+  background: #000;
+  color: #edf1edf1;
+  padding: 15px 40px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  border: 3px solid #00ff00;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.pixel-border {
+  border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff) 1;
+}
+
+.btn-glow {
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.btn-arcade:hover {
+  background: #00ff00;
+  color: #000;
+  box-shadow: 0 0 20px #00ff00;
+}
